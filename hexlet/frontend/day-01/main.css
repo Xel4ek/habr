@@ -44,10 +44,8 @@
   all: unset;
   border-bottom: 1px #474747 solid;
   text-align: end;
-}
-
-input[type=number] {
   appearance: textfield;
+
 }
 
 #add-timer {
