@@ -1,0 +1,72 @@
+#timers .remove {
+  animation: .3s ease-in remove forwards;
+}
+
+#timers .cancel {
+  cursor: pointer;
+  color: silver;
+  align-self: end;
+}
+
+#timers .cancel svg {
+  transition: color, transform .3s;
+  transform: translate(-50%, 0);
+}
+
+#timers .cancel:hover svg {
+  color: black;
+  transform: scale(1.2) translate(-50%, 0);
+}
+
+#timers {
+  padding: 1rem .5rem;
+  box-sizing: border-box;
+}
+
+#timers .row {
+  display: grid;
+  grid-template-columns: 1rem auto 1rem;
+  max-width: 15rem;
+  margin-bottom: .2rem;
+  border-bottom: 1px transparent solid;
+}
+
+#timers .row:hover {
+  border-bottom: 1px rgba(192, 192, 192, 0.47) solid;
+}
+
+#timers .row:before {
+  content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='.7rem' heigth='.7rem' x='0' y='0' viewBox='0 0 100 100' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M47.429 53.064c-3.016-2.207-5.906-4.565-8.75-6.977-2.852-2.402-5.629-4.894-8.392-7.404-2.738-2.538-5.46-5.096-8.107-7.743-2.655-2.637-5.264-5.329-7.745-8.174a2.024 2.024 0 0 1 2.571-3.064c3.232 1.949 6.336 4.052 9.395 6.208 3.066 2.147 6.058 4.384 9.033 6.64 2.951 2.285 5.887 4.587 8.748 6.979 2.869 2.382 5.693 4.818 8.39 7.406a4.01 4.01 0 0 1-5.143 6.129z' fill='%23333'/%3E%3C/g%3E%3Cpath d='M49.833 27.833V12.5c20.711 0 37.5 16.789 37.5 37.5s-16.789 37.5-37.5 37.5-37.5-16.789-37.5-37.5' fill='none' stroke='%23333' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+  margin-right: .5rem;
+}
+
+#time-input {
+  all: unset;
+  border-bottom: 1px #474747 solid;
+  text-align: end;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+#add-timer {
+  cursor: pointer;
+}
+
+#add-timer:disabled {
+  cursor: not-allowed;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@keyframes remove {
+  to {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
